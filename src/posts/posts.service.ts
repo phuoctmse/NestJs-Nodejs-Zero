@@ -1,24 +1,24 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class PostsService {
   getPosts() {
-    return 'all posts';
+    return 'all posts'
   }
 
   createPost(body: any) {
-    return body;
+    return body
   }
 
   getPostsById(id: string) {
-    return id;
+    return id
   }
 
   updatePost(id: string, body: any) {
-    return { id, ...body };
+    return { id, ...body }
   }
 
   deletePost(id: string) {
-    return `${id} deleted`;
+    return `${id} deleted`
   }
 }

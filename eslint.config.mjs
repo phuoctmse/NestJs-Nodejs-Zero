@@ -33,7 +33,8 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-return': 'warn',
       'prettier/prettier': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/only-throw-error': 'off'
+      '@typescript-eslint/only-throw-error': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
     },
   },
 )

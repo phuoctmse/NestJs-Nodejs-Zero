@@ -6,7 +6,7 @@ import fs from 'fs'
 import path from 'path'
 
 config({
-    path: '.env'
+  path: '.env',
 })
 
 if (!fs.existsSync(path.resolve('.env'))) {

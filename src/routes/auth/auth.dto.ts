@@ -1,8 +1,8 @@
 import { Exclude } from 'class-transformer'
-import { IsString } from 'class-validator'
+import { IsEmail, IsString } from 'class-validator'
 
 export class LoginBodyDTO {
-  @IsString()
+  @IsEmail()
   email: string
   @IsString()
   password: string

@@ -1,6 +1,6 @@
 import { Body, Controller, Post, SerializeOptions } from '@nestjs/common'
 import { AuthService } from './auth.service'
-import { RegisterBodyDTO, RegisterResDTO } from './auth.dto'
+import { LoginBodyDTO, LoginResDTO, RegisterBodyDTO, RegisterResDTO } from './auth.dto'
 
 @Controller('auth')
 export class AuthController {
@@ -12,5 +12,11 @@ export class AuthController {
     console.log(body)
     const newUser = await this.authService.register(body)
     return new RegisterResDTO(newUser)
+  }
+
+  @Post('login')
+  async login(@Body() body: LoginBodyDTO) {
+    const user = await this.authService.login(body)
+    return new LoginResDTO(user)
   }
 }
